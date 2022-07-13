@@ -1,0 +1,13 @@
+@use 'styles/_constants.scss' as constants;
+
+.h3 {
+  font-size: constants.$font-l;
+}
+
+.h4 {
+  font-size: constants.$font-m;
+}
+
+.h5 {
+  font-size: constants.$font-sm;
+}
