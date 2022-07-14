@@ -14,6 +14,8 @@ module.exports = {
   transform: {
     '^.+\\.[jt]sx?$': '<rootDir>/jest-preprocess.js',
   },
-  transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
+  transformIgnorePatterns: [
+    `node_modules/(?!(gatsby|gatsby-script|gatsby-link)/)`,
+  ],
   moduleDirectories: ['node_modules', 'src'],
 };

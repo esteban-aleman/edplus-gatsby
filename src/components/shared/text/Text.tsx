@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import styles from './Text.module.scss';
+import * as styles from './Text.module.scss';
 import { TextProps } from './TextProps';
 
 const Text = (props: TextProps) => {

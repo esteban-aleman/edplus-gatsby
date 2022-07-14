@@ -1,0 +1,43 @@
+@use 'styles/_constants.scss' as constants;
+
+.root {
+  background-color: constants.$white;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0.06rem 0.125rem 0.43rem 0 rgba(63, 63, 63, 0.2);
+  transition: top ease-in-out 0.5s;
+}
+.hidden {
+  top: -100%;
+}
+.container {
+  max-width: constants.$containerWidth;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: 4rem;
+  padding: 0 1.5rem;
+}
+.logo {
+  width: 3.375rem;
+  height: 3rem;
+}
+.link {
+  color: constants.$secondary;
+  margin-left: 1.5rem;
+  transition: color ease-in-out 0.3s;
+  font-size: constants.$font-s;
+  &:hover {
+    color: constants.$primary;
+  }
+}
+.menuLinks {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  li {
+    list-style: none;
+  }
+}

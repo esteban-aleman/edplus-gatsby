@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import styles from './Title.module.scss';
+import * as styles from './Title.module.scss';
 import { TitleProps } from './TitleProps';
 
 const Title = (props: TitleProps) => {
