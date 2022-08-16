@@ -1,0 +1,46 @@
+@use 'styles/_constants.scss' as constants;
+
+.root {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity ease-in-out 0.7s;
+  list-style: none;
+}
+.inactive {
+  opacity: 0;
+  position: absolute;
+}
+.image {
+  min-height: 23.43rem;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.gatsbyImgWrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.textContent {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.title,
+.text {
+  color: constants.$white;
+}
+.title {
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.text {
+  font-size: constants.$font-s;
+  line-height: 1.25rem;
+}

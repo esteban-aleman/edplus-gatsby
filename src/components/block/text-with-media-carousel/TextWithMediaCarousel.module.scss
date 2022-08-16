@@ -1,0 +1,104 @@
+@use 'styles/_constants.scss' as constants;
+
+.root {
+  background-color: constants.$white;
+}
+.mainContainer {
+  padding: 5.5rem 1.5rem 7rem;
+  max-width: constants.$containerWidth;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: constants.$white;
+}
+.content {
+  width: 50%;
+  padding-left: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.carouselContainer {
+  width: 50%;
+  box-sizing: border-box;
+}
+.text {
+  max-width: 80%;
+  text-align: right;
+}
+.title {
+  text-align: right;
+  position: relative;
+  margin-bottom: 3rem;
+  &:before {
+    display: block;
+    position: absolute;
+    bottom: -1rem;
+    right: 0;
+    content: '';
+    background-color: constants.$secondary;
+    height: 0.125rem;
+    width: 2.5rem;
+  }
+}
+.slides {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  min-height: 23.43rem;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.paginationButton {
+  border: none;
+  padding: 1rem 0.25rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+.paginationBullet {
+  border-radius: 0;
+  width: 1rem;
+  margin: 0 0.5rem;
+  background-color: constants.$secondary;
+  height: 0.25rem;
+  display: block;
+  &Active {
+    background-color: constants.$quinary;
+  }
+}
+
+@media (max-width: constants.$tablet-breakpoint) {
+  .mainContainer {
+    flex-direction: column;
+    padding-bottom: 5rem;
+  }
+  .content {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .carouselContainer {
+    width: 100%;
+  }
+  .title {
+    &:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    text-align: center;
+  }
+  .text {
+    text-align: center;
+  }
+}
