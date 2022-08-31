@@ -2,14 +2,14 @@ import { DEFAULT } from 'lib/utils/constants';
 import { TextWithMediaProps } from './TextWithMediaProps';
 
 const base: TextWithMediaProps = {
-  image: DEFAULT.image,
+  image: null,
   imageAlt: DEFAULT.string,
   title: DEFAULT.string,
   text: DEFAULT.longString,
 };
 
 const withChildren: TextWithMediaProps = {
-  image: DEFAULT.image,
+  image: null,
   imageAlt: DEFAULT.string,
   title: DEFAULT.string,
   text: DEFAULT.longString,

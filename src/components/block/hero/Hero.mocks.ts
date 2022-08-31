@@ -5,7 +5,7 @@ const base: HeroProps = {
   eyebrow: DEFAULT.string,
   title: DEFAULT.string,
   ctaText: DEFAULT.string,
-  backgroundImage: DEFAULT.image,
+  backgroundImage: null,
   ctaReferenceId: DEFAULT.string,
 };
 

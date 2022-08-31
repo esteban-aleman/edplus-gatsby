@@ -22,6 +22,14 @@ const config: GatsbyConfig = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/lib/pages-data`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 };
 

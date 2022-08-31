@@ -1,16 +1,7 @@
-// import { CardProps } from 'components/block/cards-grid/partials/CardProps';
+import { CardProps } from 'components/block/cards-grid/partials/CardProps';
 import { CarouselItemProps } from 'components/block/text-with-media-carousel/partials/CarouselItemProps';
 import { TimelineEntryProps } from 'components/block/timeline/TimelineProps';
-// import { DETAILS_PATH, DETAILS_SECTIONS } from 'lib/utils/constants';
-// import Camps from 'public/media/images/camps.jpg';
-// import Community from 'public/media/images/community.jpg';
-// import Donate from 'public/media/images/donate.jpg';
-// import Mentor from 'public/media/images/mentor.jpg';
-// import School from 'public/media/images/school.jpg';
-// import Soccer from 'public/media/images/soccer.jpg';
-// import Sponsor from 'public/media/images/sponsor.jpg';
-// import Tech from 'public/media/images/tech.jpg';
-// import Volunteer from 'public/media/images/volunteer.jpg';
+import { DETAILS_PATH, DETAILS_SECTIONS } from 'lib/utils/constants';
 
 const timelineEntries: Array<TimelineEntryProps> = [
   {
@@ -45,32 +36,32 @@ const timelineEntries: Array<TimelineEntryProps> = [
   },
 ];
 
-// const involvementCards: Array<CardProps> = [
-//   {
-//     image: Volunteer,
-//     imageAlt: 'volunteer-image-alt',
-//     title: 'volunteer',
-//     description: 'volunteer-description',
-//     linkText: 'contact-us',
-//     linkUrl: DETAILS_PATH + DETAILS_SECTIONS.contact,
-//   },
-//   {
-//     image: Donate,
-//     imageAlt: 'donate-card-image-alt',
-//     title: 'donate',
-//     description: 'donate-description',
-//     linkText: 'how-to-donate',
-//     linkUrl: DETAILS_PATH + DETAILS_SECTIONS.donate,
-//   },
-//   {
-//     image: Sponsor,
-//     imageAlt: 'sponsor-image-alt',
-//     title: 'sponsor',
-//     description: 'sponsor-description',
-//     linkText: 'contact-us',
-//     linkUrl: DETAILS_PATH + DETAILS_SECTIONS.contact,
-//   },
-// ];
+const involvementCards: Array<CardProps> = [
+  {
+    image: null,
+    imageAlt: 'volunteer-image-alt',
+    title: 'volunteer',
+    description: 'volunteer-description',
+    linkText: 'contact-us',
+    linkUrl: DETAILS_PATH + DETAILS_SECTIONS.contact,
+  },
+  {
+    image: null,
+    imageAlt: 'donate-card-image-alt',
+    title: 'donate',
+    description: 'donate-description',
+    linkText: 'how-to-donate',
+    linkUrl: DETAILS_PATH + DETAILS_SECTIONS.donate,
+  },
+  {
+    image: null,
+    imageAlt: 'sponsor-image-alt',
+    title: 'sponsor',
+    description: 'sponsor-description',
+    linkText: 'contact-us',
+    linkUrl: DETAILS_PATH + DETAILS_SECTIONS.contact,
+  },
+];
 
 const activityCarouselItems: Array<CarouselItemProps> = [
   {
@@ -117,8 +108,4 @@ const activityCarouselItems: Array<CarouselItemProps> = [
   },
 ];
 
-export {
-  timelineEntries,
-  activityCarouselItems,
-  //  involvementCards,
-};
+export { timelineEntries, activityCarouselItems, involvementCards };
