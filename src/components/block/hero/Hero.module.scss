@@ -14,7 +14,7 @@
   box-sizing: border-box;
   color: constants.$white;
 }
-.backgroundWrapper {
+:global(.gatsby-image-wrapper).backgroundWrapper {
   position: absolute;
   top: 0;
   left: 0;

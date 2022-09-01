@@ -30,7 +30,6 @@ const Hero = (props: HeroProps) => {
         />
         <Link
           cta={CTA_TYPES.secondary}
-          className={styles.cta}
           text={ctaText}
           href={`#${ctaReferenceId}`}
         />

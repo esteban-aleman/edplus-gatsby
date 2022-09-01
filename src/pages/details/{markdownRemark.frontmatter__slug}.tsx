@@ -1,25 +1,34 @@
+import { DetailsList, TextWithMedia } from 'components/block';
 import { DetailLayout, MainLayout } from 'components/layout';
-import { graphql } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
+import { TITLE_TYPES } from 'lib/utils/constants';
 import React from 'react';
 
-const DetailsPage = (props) => {
-  console.log(props);
+const DetailsPage = ({ data }: PageProps<Queries.DetailsPageQuery>) => {
+  const { t } = { t: (_s: string | null | undefined) => 'chamba' };
+
+  const mdData = data.markdownRemark?.frontmatter;
+
   return (
     <MainLayout>
       <DetailLayout>
         <title>Details Page</title>
-        <h1>
-          Details Page
-          <br />
-          <span>Details Page</span>
-        </h1>
+        <TextWithMedia
+          title={t(mdData?.title)}
+          titleLevel={TITLE_TYPES.h1}
+          text={t(mdData?.description)}
+          image={mdData?.image?.childImageSharp?.gatsbyImageData}
+          imageAlt={t(mdData?.image_alt)}
+        >
+          {mdData?.details && <DetailsList details={[...mdData.details]} />}
+        </TextWithMedia>
       </DetailLayout>
     </MainLayout>
   );
 };
 
 export const query = graphql`
-  query ($id: String) {
+  query DetailsPage($id: String) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
@@ -29,9 +38,10 @@ export const query = graphql`
             gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
-        test {
-          cool
-          ok
+        image_alt
+        details {
+          title
+          text
         }
       }
     }
